@@ -1,0 +1,18 @@
+{this.props.items.length==0?<h1>your cart is empty</h1>:
+{this.props.items.map((item) =>{
+<div>
+       {<Navbar/>}
+       <h2>My Cart</h2>
+       <p>{item.name}</p>
+       <p>{item.price}</p>
+       <button onClick={this.handleIncr}>+</button>
+       {Item.length}   
+       <button onClick={this.handleDecr}>-</button>
+       <button onClick={this.handleDelete}>Delete</button>
+       <p>Choose your shipping</p>
+       <select>
+       <option value={this.onOption1}>Shipping within 7 days(+50)</option>
+       <option value={this.onOption2}>Shipping within 2 days(+100)</option>
+       </select>
+       <button onClick={this.handleOrder}>placeOrder</button>
+      </div>}
